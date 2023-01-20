@@ -19,3 +19,26 @@ const dataSector = [
   { sector: "energie", ca: 16897350 },
   { sector: "administratif", ca: 120459 },
 ];
+
+function Page1() {
+  return (
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>date</th>
+            <th>uv</th>
+          </tr>
+        </thead>
+        <tbody>
+          {users.map((user) => (
+            <tr key={user.id}>
+              <td>{user.date}</td>
+              <td>{user.uv}</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
